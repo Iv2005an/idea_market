@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}
+  Авторизация
+{% endblock %}
+{% block main %}
+  <div class="auth-container">
+    <img class="img-container" src="{% static 'img/xudozhnik_Igor_Ozhiganov_20.jpg' %}" />
+    <div class="form-container">
+      <div class="form-title-container">
+        <h1>Базаръ Умысловъ</h1>
+        <h2 class="form-title">Добро пожаловать</h2>
+      </div>
+      <form class="form-data" method="post">
+        {{ form }}
+        {% csrf_token %}
+        <button type="submit">
+          {% block button_text %}
+
+          {% endblock %}
+        </button>
+      </form>
+      <div class="suggest-container">
+        <span>
+          {% block suggest_text %}
+
+          {% endblock %}&nbsp;
+        </span>
+        <a href="{% block suggest_link %}
+
+          {% endblock %}">
+          {% block suggest_link_text %}
+
+          {% endblock %}
+        </a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,106 @@
+@import url('https://fonts.googleapis.com/css2?family=Monomakh&display=swap');
+
+:root {
+    --color-dark-red: #891010;
+    --color-red: #a80f0f;
+    --color-grey: #827474;
+    --color-beige: #c68f57;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    font-family: "Monomakh", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+}
+
+button {
+    font-family: "Monomakh", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: medium;
+}
+
+.auth-container {
+    background-color: var(--color-beige);
+    display: flex;
+    flex-direction: row;
+    margin: auto;
+    margin-inline: 128px;
+    max-width: 800px;
+    min-width: 600px;
+    border-radius: 16px;
+}
+
+.img-container {
+    width: 50%;
+    object-fit: cover;
+    border-radius: 16px 0px 0px 16px;
+}
+
+.form-container {
+    color: white;
+    width: 50%;
+    padding: 16px;
+    gap: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.form-title-container {
+    text-align: center;
+}
+
+.form-data {
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-data div {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-data input {
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+}
+
+.form-data .helptext {
+    font-size: smaller;
+}
+
+.form-data .errorlist {
+    color: var(--color-red);
+}
+
+.form-data button {
+    color: white;
+    background-color: var(--color-grey);
+    border: none;
+    padding: 8px;
+    border-radius: 8px;
+    transition: 0.25s;
+}
+
+.form-data button:hover {
+    filter: brightness(50%)
+}
+
+.form-container .suggest-container a {
+    color: var(--color-dark-red);
+}
