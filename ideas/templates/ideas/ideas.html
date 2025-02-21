@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+{% block title %}
+  Базар Умыслов
+{% endblock %}
+{% block main %}
+  <div class="ideas-container">
+    {% for idea in ideas %}
+      {% include 'ideas/idea.html' %}
+    {% endfor %}
+  </div>
+{% endblock %}

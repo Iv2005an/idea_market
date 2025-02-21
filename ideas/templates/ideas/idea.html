@@ -1,0 +1,18 @@
+<div class="idea-card" id="idea_{{ idea.pk }}">
+  <h2 class="idea-card-title">{{ idea.title }}</h2>
+  <span class="idea-info">От великого, {{ idea.user.username }} • Задумано в {{ idea.create_time }}</span>
+  <div class="idea-description">
+    <span>{{ idea.description }}</span>
+  </div>
+  <div class="idea-card-footer">
+    {% if not idea.user == user %}
+      <div class="vote-bar">
+        <a href="{% url 'up_vote_idea' idea.pk %}"><button>Одобряем</button></a>
+        <span class="votes">{{ idea.votes|default:0 }}</span>
+        <a href="{% url 'down_vote_idea' idea.pk %}"><button>Осуждаем</button></a>
+      </div>
+    {% else %}
+      <a href="{% url 'delete_idea' idea.pk %}"><button>Забыть навсегда</button></a>
+    {% endif %}
+  </div>
+</div>

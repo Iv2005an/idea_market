@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %}
+  Свой умысел
+{% endblock %}
+
+{% block main %}
+  <div class="form-container idea-form-container">
+    <div class="form-title-container">
+      <h2 class="form-title">Поведайте всем</h2>
+    </div>
+    <form class="form-data" method="post">
+      {{ form }}
+      {% csrf_token %}
+      <button type="submit">Задумать</button>
+    </form>
+  </div>
+{% endblock %}
