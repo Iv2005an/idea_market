@@ -5,6 +5,7 @@
     --color-red: #a80f0f;
     --color-grey: #827474;
     --color-beige: #c68f57;
+    --color-white-beige: #d4ac83;
 }
 
 html,
@@ -17,9 +18,36 @@ body {
     font-style: normal;
 }
 
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    background-color: var(--color-beige);
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-inline: 16px;
+    border-bottom: solid 1px var(--color-grey);
+}
+
+.main-title {
+    color: white;
+    font-size: xx-large;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.account-container {
+    display: flex;
+    flex-direction: row;
+    gap: 8px;
+}
+
 main {
     display: flex;
-    justify-content: center;
     height: 100%;
     width: 100%;
 }
@@ -31,15 +59,27 @@ button {
     font-size: medium;
 }
 
-.auth-container {
-    background-color: var(--color-beige);
+a {
+    color: var(--color-dark-red);
+}
+
+.button-a {
+    background: none;
+    border: none;
+    padding: 0;
+    color: var(--color-dark-red);
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.auth-container,
+.idea-form-container {
     display: flex;
     flex-direction: row;
     margin: auto;
     margin-inline: 128px;
     max-width: 800px;
     min-width: 600px;
-    border-radius: 16px;
 }
 
 .img-container {
@@ -49,6 +89,8 @@ button {
 }
 
 .form-container {
+    border-radius: 0px 16px 16px 0px;
+    background-color: var(--color-beige);
     color: white;
     width: 50%;
     padding: 16px;
@@ -74,10 +116,15 @@ button {
     flex-direction: column;
 }
 
-.form-data input {
+.form-data input,
+.form-data textarea {
     border: none;
     padding: 8px;
     border-radius: 8px;
+}
+
+.form-data textarea {
+    resize: none
 }
 
 .form-data .helptext {
@@ -101,6 +148,44 @@ button {
     filter: brightness(50%)
 }
 
-.form-container .suggest-container a {
-    color: var(--color-dark-red);
+.form-data button:active {
+    filter: brightness(25%)
+}
+
+.ideas-container {
+    width: 100%;
+    padding-inline: 16px;
+    display: flex;
+    flex-direction: column;
+}
+
+.idea-card {
+    background-color: var(--color-white-beige);
+    margin: 8px 0;
+    padding: 8px;
+    border: solid 1px var(--color-grey);
+    border-radius: 8px;
+}
+
+.idea-card-title {
+    margin: 0;
+}
+
+.idea-info {
+    margin: 0;
+    font-size: small;
+}
+
+.idea-description {
+    margin: 8px 0;
+}
+
+.idea-card-footer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.idea-form-container {
+    display: flex;
+    border-radius: 16px;
 }

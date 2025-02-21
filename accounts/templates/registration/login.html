@@ -1,6 +1,12 @@
-{% extends 'registration/base.html' %}
+{% extends 'registration/base_auth.html' %}
+{% block title %}
+  Авторизация
+{% endblock %}
+{% block form_title %}
+  Добро пожаловать
+{% endblock %}
 {% block button_text %}
-  Войти в наше собратство
+  Зайти на базар
 {% endblock %}
 {% block suggest_text %}
   Забыли пароль? Не забывайте<br /> Ещё не с нами?!
@@ -9,5 +15,5 @@
   ../register
 {% endblock %}
 {% block suggest_link_text %}
-  Так вступайте
+  Так пройдите на регистрацию
 {% endblock %}
