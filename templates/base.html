@@ -21,7 +21,7 @@
         {% if user.is_authenticated %}
           <a href="{% url 'create_idea' %}">Что-то задумать</a>
           <a href="{% url 'my_ideas' %}">Собственные замыслы</a>
-          <a href="{% url 'profile' %}">Карточка славянина</a>
+          <a href="{% url 'profile' %}">Учётные данные</a>
           <form action="{% url 'logout' %}" method="post">
             {% csrf_token %}
             <button class="button-a" type="submit">Покинуть базар</button>

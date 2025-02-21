@@ -77,7 +77,6 @@ a {
     display: flex;
     flex-direction: row;
     margin: auto;
-    margin-inline: 128px;
     max-width: 800px;
     min-width: 600px;
 }
